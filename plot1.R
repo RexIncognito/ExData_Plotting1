@@ -1,9 +1,9 @@
 if(!file.exists("household_power_consumption.txt"))
 {
-     fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
      message("Downloading the file")
-     download.file(fileUrl)
-     unzip("household_power_consumption.zip")  
+     fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+     download.file(fileUrl, destfile = "./household_power_consumption.zip")
+     unzip("./household_power_consumption.zip")  
 }
 
 consumptionData <- read.table("household_power_consumption.txt", sep = ";", header = TRUE, na.strings = "?", colClasses = c("character","character","numeric","numeric","numeric","numeric","numeric","numeric","numeric"))

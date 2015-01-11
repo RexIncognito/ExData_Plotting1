@@ -2,7 +2,7 @@ if(!file.exists("household_power_consumption.txt"))
 {
      fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
      message("Downloading the file")
-     download.file(fileUrl)
+     download.file(fileUrl, destfile = "./household_power_consumption.zip")
      unzip("household_power_consumption.zip")  
 }
 
